@@ -14,7 +14,7 @@
 
 import pandas
 
-# data = pandas.read_csv("notes/weather_data.csv")
+data = pandas.read_csv("notes/weather_data.csv")
 
 # data_dict = data.to_dict()
 # print(data_dict)
@@ -39,28 +39,11 @@ import pandas
 # print(monday_temp * 9 / 5 + 32)
 
 # Create dara frame from scratch
-# data_dict = {
-#     "students": ["Amy", "James", "Anegla"],
-#     "scores": [76, 56, 65]
-# }
-
-# data = pandas.DataFrame(data_dict)
-# print(data)
-# data.to_csv("new_data.csv")
-
-data = pandas.read_csv("notes/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
-
-grey_squirrels_count = len(data[data["Primary Fur Color"] == "Gray"])
-red_squirrels_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
-black_squirrels_count = len(data[data["Primary Fur Color"] == "Black"])
-print(grey_squirrels_count)
-print(red_squirrels_count)
-print(black_squirrels_count)
-
 data_dict = {
-    "Fur Color": ["Gray", "Cinnamon", "Black"],
-    "Count": [grey_squirrels_count, red_squirrels_count, black_squirrels_count]
+    "students": ["Amy", "James", "Anegla"],
+    "scores": [76, 56, 65]
 }
 
-df = pandas.DataFrame(data_dict)
-df.to_csv("squirrel_count.csv")
+data = pandas.DataFrame(data_dict)
+print(data)
+data.to_csv("new_data.csv")
